@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Burgerr - Your Delicious Burger</title>
+    <link rel="shortcut icon" href="#" type="image/x-icon" />
+    <link href="css/simple-grid.min.css" rel="stylesheet" media="screen" />
+    <link href="css/stylesheet.css" rel="stylesheet" media="screen" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="col-6">
+          <a href="./main.html" class="logo">BURGERR</a>
+          <div class="sub-logo">Your Delicious Burger</div>
+        </div>
+      </div>
+    </header>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-6">
+          <div id="control">
+            <div class="col-12">
+              <button onClick="">RESET</button>
+              <div
+                id="trash"
+                ondrop="dropReset(event)"
+                ondragover="dragOver(event)"
+              >
+                <p>DRAG HERE TO RETURN</p>
+              </div>
+            </div>
+
+            <div class="col-12">
+              <div>Drag your burger bellow</div>
+              <button onClick="" id="buttonOrder">ORDER</button>
+              <div
+                id="order"
+                ondrop="dropItem(event)"
+                ondragover="dragOver(event)"
+                ondragleave="dragLeave(event)"
+              >
+                <img
+                  src="img/bread-top.png"
+                  id="breadTop"
+                  draggable="false"
+                  style="z-index: 1000"
+                />
+                <img
+                  src="img/bread-bottom.png"
+                  id="breadBottom"
+                  draggable="false"
+                  style="z-index: 1"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-6">
+          <div id="item" class="col-12">
+            <div class="row">
+              <a class="btn-arrow prev">&#10094;</a>
+              <a class="btn-arrow next">&#10095;</a>
+            </div>
+
+            <div class="slide-item" id="bahan">
+              <div class="slide active">
+                <div class="desc">Vegetable - $0.5</div>
+                <img
+                  src="img/vegetable.png"
+                  id="2"
+                  data-price="0.5"
+                  data-name="Vegetable"
+                  draggable="true"
+                />
+              </div>
+              <div class="slide">
+                <div class="desc" data-price="5">Beef - $5</div>
+                <img
+                  src="img/beef.png"
+                  id="3"
+                  data-price="5"
+                  data-name="Beef"
+                  draggable="true"
+                />
+              </div>
+              <div class="slide">
+                <div class="desc" data-price="2">Egg - $2</div>
+                <img
+                  src="img/egg.png"
+                  id="4"
+                  data-price="2"
+                  data-name="Egg"
+                  draggable="true"
+                />
+              </div>
+              <div class="slide">
+                <div class="desc" data-price="1">Tomato - $1</div>
+                <img
+                  src="img/tomato.png"
+                  id="5"
+                  data-price="1"
+                  data-name="Tomato"
+                  draggable="true"
+                />
+              </div>
+              <div class="slide">
+                <div class="desc" data-price="2">Cheese - $2</div>
+                <img
+                  src="img/cheese.png"
+                  id="6"
+                  data-price="2"
+                  data-name="Cheese"
+                  draggable="true"
+                />
+              </div>
+              <div class="slide">
+                <div class="desc" data-price="1">Onion - $1</div>
+                <img
+                  src="img/onion.png"
+                  id="7"
+                  data-price="1"
+                  data-name="Onion"
+                  draggable="true"
+                />
+              </div>
+              <div class="slide">
+                <div class="desc" data-price="1">Pikle - $1</div>
+                <img
+                  src="img/pickle.png"
+                  id="8"
+                  data-price="1"
+                  data-name="Pikle"
+                  draggable="true"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12">
+            <div class="det">Detail Order</div>
+            <div id="table-detail">
+              <table id="detail"></table>
+            </div>
+            <div><table id="total"></table></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer></footer>
+
+    <script src="./js/item.js"></script>
+    <script src="./js/app.js"></script>
+  </body>
+</html>
